@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive and Printable Resume</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'); 
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            max-width: 8.3in; 
+            width: 100%;
+            height: auto; 
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 1px solid #ddd;
+            margin: 20px auto; 
+            padding: 0.3in;
+            box-sizing: border-box;
+        }
+        .left-panel {
+            background: #f2f2f2;
+            padding: 20px;
+            width: 30%; 
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .left-panel img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .left-panel h2 {
+            font-size: 18px;
+            margin: 10px 0;
+            text-align: center;
+            color: #333;
+        }
+        .contact {
+            margin-top: 15px;
+            width: 100%;
+        }
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+        .contact-info i {
+            margin-right: 10px;
+            color: #444;
+        }
+        .section-title {
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #444;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            width: 100%;
+            text-align: left;
+        }
+        .content {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            font-size: 14px;
+            color: #333;
+            margin: 6px 0;
+            line-height: 1.5;
+        }
+        ul li::before {
+            content: "•";
+            color: #666;
+            margin-right: 8px;
+        }
+        .right-panel {
+            padding: 20px;
+            width: 70%; 
+            box-sizing: border-box;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 15px;
+            }
+            .left-panel,
+            .right-panel {
+                width: 100%;
+            }
+            .left-panel img {
+                width: 100px;
+                height: 100px;
+            }
+            .left-panel h2 {
+                font-size: 16px;
+            }
+            .contact-info {
+                font-size: 12px;
+            }
+            .section-title {
+                font-size: 14px;
+            }
+            .content,
+            ul li {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            .left-panel img {
+                width: 80px;
+                height: 80px;
+            }
+            .left-panel h2 {
+                font-size: 14px;
+            }
+            .contact-info {
+                font-size: 11px;
+            }
+            .section-title {
+                font-size: 12px;
+            }
+            .content,
+            ul li {
+                font-size: 11px;
+            }
+        }
+        @media print {
+            @page {
+                margin: 0; 
+            }
+            body {
+                margin: 0; 
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact; 
+            }
+            .container {
+                display: flex;
+                flex-direction: row; 
+                width: 8.3in; 
+                height: 10.9in; 
+                padding: 0.3in; 
+                box-sizing: border-box; 
+            }
+            .left-panel {
+                width: 30%;
+            }
+            .right-panel {
+                width: 70%;
+            }
+            .contact-info {
+                font-size: 14px;
+            }
+            .content {
+                font-size: 14px;
+            }
+            ul li {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <img src="./img/pp.png" alt="Richie Narval">
+            <h2>Richie Tess Lourdes B. Narval</h2>
+            <div class="contact">
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <span>09454312045</span>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <span>tessnarval11@gmail.com</span>
+                </div>
+                <div class="contact-info">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/richie-narval-23866a337" 
+                       target="_blank" 
+                       title="Click to redirect"
+                       style="text-decoration: none; color: #333;">
+                        Richie Narval
+                    </a>
+                </div>                
+            </div>
+            <h3 class="section-title">Skills</h3>
+            <ul>
+                <li>PHP, HTML, CSS, JavaScript</li>
+                <li>Django, Java, C, C#</li>
+                <li>SQL for database</li>
+                <li>Strong communication and teamwork</li>
+            </ul>
+        </div>
+        <div class="right-panel">
+            <div class="section">
+                <h3 class="section-title">Objective</h3>
+                <p class="content">
+                    To secure an internship in Information Technology where I can gain new knowledge, sharpen my skills through hands-on experience,
+                    and contribute positively to the company's growth and success with dedication and a humble approach.
+                </p>
+            </div>
+            <div class="section">
+                <h3 class="section-title">Education</h3>
+                <p class="content"><strong>Cebu Technological University</strong></p>
+                <p class="content">Bachelor of Science in Information Technology</p>
+                <p class="content">Internship Requirement: 730 Hours</p>
+            </div>
+            <div class="section">
+                <h3 class="section-title">Projects and Experience</h3>
+                <ul>
+                    <li>Simple Point of Sale (2nd year)</li>
+                    <li>E-commerce Platform (2nd year)</li>
+                    <li>Fitness Tracking System (3rd year)</li>
+                    <li>Point of Sale for Pharmacy (3rd year)</li>
+                    <li>Vehicle Rental Services (3rd year)</li>
+                    <li>Teachers Evaluation System (4th year)</li>
+                    <li>Fire Safety Inspection and Management Information System (4th year)</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3 class="section-title">Additional Information</h3>
+                <p class="content">
+                    <span style="font-weight: bold;">Leadership and Communication</span>. Proven leadership skills showed through effective coordination and management of team
+                    projects. Gained experience in hosting and public speaking.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
